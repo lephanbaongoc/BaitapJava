@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface UIComponent{
+    +String show()
+    +void addI(UIComponent c)
+    +void removeI(UIComponent c)
+    +String show
+}
+
+
+
+UIComponent <|... Layout
+UIComponent <|.. Component
+Layout *--> UIComponent:children
+
+note bottom of Layout
+    Composite
+end note
+
+note bottom of Component
+    Component
+end note
+
+@enduml

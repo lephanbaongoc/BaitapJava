@@ -7,7 +7,9 @@ public class Main {
         float kq2 = c.setTinh(new Tru()).tinh(kq1,7);
         float kq3 = c.setTinh(new Nhan()).tinh(kq1,7);
         float kq4 = c.setTinh(new Chia()).tinh(kq1,7);
+        float kq = c.setTinh(new Can()).tinh(kq1,3);
 
         System.out.println(kq1 + "\n" + kq2 +  "\n" + kq3 +  "\n" + kq4);
+        System.out.println("\n"+kq);
     }
 }
