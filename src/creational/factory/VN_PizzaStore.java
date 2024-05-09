@@ -14,7 +14,7 @@ public class VN_PizzaStore extends PizzaStore{
 
     public static void main(String[] args) {
         PizzaStore ps = new VN_PizzaStore();
-        Pizza p = ps.orderPizza(PizzaType.HAISAN);
+        Pizza p = ps.orderPizza(PizzaType.NAM);
         System.out.println(p.toString());
     }
 }

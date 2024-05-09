@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class MyStream<T>{
+    + void addListener(MyStreamListener listener)
+    + void addEvent(T t)
+}
+interface MyStreamListener<T>{
+    void listen(T t)
+}
+class DataAccess{
+    - List<MonHoc> list
+    + void add(MonHoc m)
+    + void update(MonHoc m)
+    + void delete(Sting id)
+}
+
+class DataAccess
+class MyStream
+class MyClient
+interface MyStreamListener
+MyStreamListener <.. MyClient
+MyStream o--> MyStreamListener: listener
+MyClient --> MyStream: stream
+DataAccess --> MyStream: stream
+
+@enduml

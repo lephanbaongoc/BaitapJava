@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface TaiKhoanObserver{
+    + int kiemTraSoDu(float soDu)
+    + void thongBao()
+}
+
+TaiKhoanObserver <-- ATM
+ATM <-- TaiKhoan
+TaiKhoanObserver <|.. TaiKhoan
+
+class TaiKhoan{
+    String tenTK
+    float soDu
+}
+
+class ATM{
+    + void attach(TaiKhoanObserver observer)
+    + void detach(TaiKhoanObserver observer)
+    + void rutTien(int soTien)
+}
+
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+interface Tokenize{
+    List<String> tokenize();
+}
+
+class TachTu{
+    String s;
+}
+abstract TokenDecorator
+
+Tokenize <|.. TachTu
+Tokenize <|.. TokenDecorator
+TokenDecorator --> Tokenize : token
+TokenDecorator <|-- RemoveStopword
+TokenDecorator <|-- RemovePunctuation
+
+
+
+@enduml
