@@ -1,0 +1,20 @@
+@startuml
+
+abstract class TienDienBacThang{
+    String tenBac
+    int min, max
+    float giaTien
+    public {abstract} void TienDien(int soKyDien)
+    public {abstract} TienDienBacThang bacCaoHon(TienDienBacThang bac)
+
+}
+class BacThongThuong{
+
+}
+class BacCaoNhat{
+
+}
+TienDienBacThang <|-- BacThongThuong : bacCaoHon
+TienDienBacThang <|-- BacCaoNhat
+
+@enduml
